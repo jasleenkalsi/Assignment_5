@@ -49,7 +49,7 @@ def get_balance(account: int) -> str:
     # Return a string message with the account number and its balance
     return f"Your current balance for account {account} is ${balance:.2f}."
     
-    
+
 
 VALID_TASKS = {"balance", "deposit", "exit"}
 
