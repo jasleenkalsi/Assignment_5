@@ -1,8 +1,9 @@
 """""
 Description: Testing of the chatbot functions.
-Author: Manjot Kaur
-Date: 2023-10-29
+Author: Jasleen kaur
+Date: 22 March,2024
 Usage: To test the function in chatbot program.
+
 """
 import unittest
 from unittest.mock import patch
@@ -184,8 +185,10 @@ class ChatbotTests(unittest.TestCase):
 
         # Act
             with self.assertRaises(ValueError) as context:
-                user_selection()
+             user_selection()
 
         # Assert
-            self.assertEqual(str(context.exception),"Invalid task. Please choose balance, deposit, or exit.")
+            self.assertEqual(str(context.exception),"Invalid task. Please choose balance, deposit, or exit.")
+
+
 

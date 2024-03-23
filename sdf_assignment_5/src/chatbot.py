@@ -8,6 +8,8 @@ Date: 22 March,2024
 Usage: From the console: python src/chatbot.py
 """
 
+
+
 ## GIVEN CONSTANT COLLECTIONS
 ACCOUNTS = {
     123456 : {"balance" : 1000.0},
@@ -20,13 +22,15 @@ VALID_TASKS = {"balance", "deposit", "exit"}
 
 def get_account() -> int:
     """
+    Returns an integer if it is valid, after getting the input from user.
+
     Returns:
-    int: The valid account number entered by the user.
+        int: Valid account number entered by the user.
 
     Raises:
-    ValueError: If the user input is not an integer.
-    Exception: If any unforeseen error arises during execution.
-
+        ValueError: If the user enters a non-integer value.
+        Exception: If any unexpected error occurs.
+    
     """
     try:
         account_number = int(input("Please enter your account number: "))
@@ -47,6 +51,7 @@ def get_amount() -> float:
 
     Raises:
         ValueError: If the user enters a non-numeric or a non-positive number.
+    
     """
 
     try:
@@ -61,11 +66,16 @@ def get_amount() -> float:
 
 def get_balance(account_number: int) -> str:
     """
-   Returns:
-    float: The amount to be deposited.
+    Returns the balance of a specific account.
 
-Raises:
-    ValueError: If the user input is not a numeric value or if it is not positive.
+    Args:
+        account_number(int): The account number.
+    
+    Returns:
+        str: A message having the account balance and account number.
+
+    Raises:
+        Exception: If the account number does not exist in ACCOUNTS.
     
     """
 
@@ -184,5 +194,5 @@ def chatbot():
 
     print("Thank you for banking with PiXELL River Financial.")
    
-if __name__ == "_main_":
-  chatbot()
+if __name__ == "__main__":
+     chatbot()
