@@ -47,7 +47,7 @@ def get_amount() -> float:
     Returns a float value, after getting the input from user.
 
     Returns:
-        float: The amount to be deposited.
+        float: The amount is deposited.
 
     Raises:
         ValueError: If the user enters a non-numeric or a non-positive number.
